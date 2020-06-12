@@ -1,0 +1,23 @@
+@model IEnumerable<SimpleMovieApp.Models.Movie>
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-3">
+            <div class="row">
+            @foreach (var movie in Model)
+            {
+                    <div class="col-9 mx-auto pb-3">
+                        <div class="card text-center">
+                            @*https://m.media-amazon.com/images/M/MV5BM2UwMDVmMDItM2I2Yi00NGZmLTk4ZTUtY2JjNTQ3OGQ5ZjM2XkEyXkFqcGdeQXVyMTA1OTYzOTUx._V1_UY1200_CR90,0,630,1200_AL_.jpg*@
+                            <img class="" src="~/images/fordvsferrari.jpg" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">@movie.MovieName</h5>
+                                <p class="card-text">@movie.Description</p>
+                                <p>@ViewBag.category</p>
+                            </div>
+                        </div>
+                    </div>
+            }
+            </div>
+        </div>
+    </div>
+</div>

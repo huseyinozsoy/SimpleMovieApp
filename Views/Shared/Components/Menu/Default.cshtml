@@ -1,0 +1,12 @@
+@model IEnumerable<SimpleMovieApp.Models.Category>
+
+<div class="mt-3">
+    <ul style="list-style:none;" class="mt-3">
+        <ul class="list-group">
+        <li class="list-group-item active">Kategoriler</li>
+        @foreach (var category in Model)
+        {
+            <a asp-action="Category" class="text-primary" asp-route-id="@category.CategoryID"><li class="list-group-item">@category.CategoryName</li></a>
+        }
+    </ul>
+</div>
